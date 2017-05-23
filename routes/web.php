@@ -10,7 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Static sites
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cv', function () {
+    return view('cv');
+});
+
+//Dynamic sites
