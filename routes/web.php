@@ -20,3 +20,9 @@ Route::get('/cv', function () {
 });
 
 //Dynamic sites
+Route::get('/blog', 'PostsController@index');
+Route::get('/blog/create', 'PostsController@create');
+Route::post('/posts', 'PostsController@store');
+Route::get('/blog/{id}', 'PostsController@show');
+
+Route::post('blog/posts/{post}/comments', 'CommentsController@store');

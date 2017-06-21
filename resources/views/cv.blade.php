@@ -1,12 +1,12 @@
-<!doctype html>
-<html>
-<head>
+@extends('layouts.cvlay')
+@section('css')
     <link rel="stylesheet" type="text/css" href="css/statics.css">
-    <title>CV</title>
-    <meta name="description" content="The CV on the page">
-</head>
-<body>
-<div class="cv-main">
+@endsection
+@section('title')
+    CV
+    @endsection
+@section('content')
+    <div class="cv-main">
     <div class ="cv-title"><h1>Odd Andre Vatne</h1></div>
     <div class = "cv-personal">
         <div class = "cv-personal-info">
@@ -98,5 +98,4 @@
         </p>
     </div>
 </div>
-</body>
-</html>
+@endsection
