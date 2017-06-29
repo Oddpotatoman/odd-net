@@ -6,7 +6,7 @@
                                 @endif href="/">Odd-Net</a></li>
             <li class="blog"><a @if (\Request::is('blog'))
                                 class="active"
-                                @endif href="/blog">Blog</a></li>
+                                @endif href="blog">Blog</a></li>
             <li class="about">
                 <a @if (\Request::is('blog/create'))
                         class="active"
@@ -17,5 +17,10 @@
             <li class="contact"><a @if (\Request::is('blogsss'))
                                    class="active"
                                    @endif href="#">Contact</a></li>
+            @if (Auth::check())
+
+                <li class="user"><a href="/logout"> {{ Auth::user()->name }} </a></li>
+
+            @endif
         </ul>
  </div>

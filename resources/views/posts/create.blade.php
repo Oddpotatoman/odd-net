@@ -6,6 +6,7 @@
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
+    <script src="//cdn.ckeditor.com/4.7.0/standard/ckeditor.js"></script>
 @endsection
 @section('content')
 <div class="blog-main">
@@ -21,6 +22,11 @@
                 <h2>Content</h2>
                 <textarea type="text" class="blog-form-content" name="content" id="content" rows="10"></textarea>
             </div>
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'content' );
+            </script>
             <button type="submit" class="blog-form-button">Submit</button>
         </form>
     </div>

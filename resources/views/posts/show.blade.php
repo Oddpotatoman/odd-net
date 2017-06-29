@@ -15,9 +15,9 @@
         <h1>{{$post->title}}</h1>
     </div>
     <div class="blog-post-view">
-        <div class="blog-show-content">
+        <div id="blog-show-content">
             <p>
-                {{$post->body}}
+                {!!  $post->body !!}
             </p>
         </div>
     </div>
@@ -29,7 +29,9 @@
                     <strong>
                         {{ $comment->created_at->diffForHumans() }}
                     </strong>
+                    <span>
                     {{ $comment->Body }}
+                    </span>
                 </article>
             @endforeach
         </div>

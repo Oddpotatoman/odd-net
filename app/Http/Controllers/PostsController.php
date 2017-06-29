@@ -7,14 +7,23 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
     public function index(){
 
         $posts = Post::latest()->get();
 
         return view('posts.index', compact('posts'));
     }
+
     public function create(){
-        return view('posts.create');
+        if (auth()->user()->user_level == 2 && auth()->check()) {
+            return view('posts.create');
+        } else {
+            return redirect('/blog');
+        }
     }
     public function show($id){
         $post = Post::find($id);
@@ -30,7 +39,8 @@ class PostsController extends Controller
         //Create the validated data and send it to the DB
         Post::create([
             'title'=>request('title'),
-            'body'=>request('content')
+            'body'=>request('content'),
+            'user_id' => auth()->id()
         ]);
         //Time to see the post
         return redirect('/blog');

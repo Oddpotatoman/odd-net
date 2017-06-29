@@ -11,18 +11,32 @@
 |
 */
 //Static sites
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/cv', function () {
-    return view('cv');
-});
+//INDEX
+    Route::get('/', function () {
+        return view('welcome');
+    });
+//CV
+    Route::get('/cv', function () {
+        return view('cv');
+    });
 
 //Dynamic sites
-Route::get('/blog', 'PostsController@index');
-Route::get('/blog/create', 'PostsController@create');
-Route::post('/posts', 'PostsController@store');
-Route::get('/blog/{id}', 'PostsController@show');
+    //Blog
+        Route::get('/blog', 'PostsController@index');
+        Route::get('/blog/create', 'PostsController@create');
+        Route::post('/posts', 'PostsController@store');
+        Route::get('/blog/{id}', 'PostsController@show');
+        Route::post('blog/posts/{post}/comments', 'CommentsController@store');
 
-Route::post('blog/posts/{post}/comments', 'CommentsController@store');
+    // Daylog
+        Route::get('/daylog', 'DaylogsController@index');
+        Route::post('/daylog', 'DaylogsController@create');
+
+// Authentication
+    //Global site function
+        Route::get('/register', 'RegistrationController@create');
+        Route::post('/register', 'RegistrationController@store');
+
+        Route::get('/login', 'SessionsController@login')->name('login');
+        Route::post('/login', 'SessionsController@store');
+        Route::get('/logout', 'SessionsController@logout');

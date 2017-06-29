@@ -1,0 +1,21 @@
+.daylog-log-container{
+    width: 700px;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right: auto;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 20px;
+}
+.daylog-log-container article{
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+.daylog-log-container article span{
+    float: right;
+    margin-right: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+}

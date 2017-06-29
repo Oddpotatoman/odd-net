@@ -3,26 +3,25 @@
 <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
 @yield('css')
 <html>
-<header>
-    @include('layouts.nav')
-</header>
-<head>
+    <header>
+        @include('layouts.nav')
+    </header>
+    <head>
 
+        <title> @yield('title') </title>
 
-    <title> @yield('title') </title>
+    </head>
 
-</head>
+    <body>
 
-<body>
+        <div id="wrap">
 
-<div id="wrap">
+            @yield('content')
 
-@yield('content')
+        </div>
 
-</div>
+    </body>
 
-</body>
-
-<footer id="footer">@include('layouts.footer')</footer>
+    <footer id="footer">@include('layouts.footer')</footer>
 
 </html>

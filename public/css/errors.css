@@ -1,0 +1,16 @@
+.error-report {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    border-radius: 135px;
+    width: 400px;
+    display: table;
+    background: rgba(255, 0, 0, 0.4);
+}
+.error-report li{
+    list-style: none;
+}
+.error-report ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

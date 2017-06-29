@@ -1,0 +1,43 @@
+.global-form-input-text{
+    margin-top: 15px;
+}
+.global-form-input-text label{
+    font-weight: bold;
+}
+.global-form-text-short{
+    align-content: center;
+    margin-right: auto;
+    margin-left: 50px;
+    width: 300px;
+    height: 30px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: lightgray;
+    color: black;
+    font-size: 1em;
+}
+.global-form-text-short:focus {
+    outline: none;
+    background-color: white;
+}
+.global-form-button{
+    margin-top: 20px;
+    background-color: #204d74;
+    border: none;
+    border-radius: 135px;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.global-form-button:hover{
+    margin-top: 20px;
+    background-color: darkorange;
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
