@@ -7,26 +7,17 @@
 
 @endsection
 @section('content')
-    <div class="user-container">
-        <h1>Sign In</h1>
-        <div class="user-signin-container">
 
-            <form method="POST" action="/login">
-                {{csrf_field()}}
-                <div class="global-form-input-text">
-                    <label for="email">Email Adress</label>
-                    <input type="email" class="global-form-text-short" name="email" id="email" required>
-                </div>
-                <div class="global-form-input-text">
-                    <label for="password">Password</label>
-                    <input type="password" class="global-form-text-short" name="password" id="password" required>
-                </div>
-                <button type="submit" id="sign-in-button" class="global-form-button">Sign in</button>
-
-            </form>
-
+    <div class="container-login-fields">
+        <p class="text">Sign In</p>
+        <div class="container-login-email clearfix">
+            <p class="text-login-email">E-mail</p>
+            <input class="input-login-text-email" name="email" type="text">
         </div>
-
+        <div class="container-login-password clearfix">
+            <p class="text-login-password-label">Passord</p>
+            <input class="password-login-text-pass" name="password" type="password">
+        </div>
     </div>
 
 @endsection

@@ -1,9 +1,73 @@
-#password{
-    margin-left: 75px;
+.container-login-fields {
+    float: left;
+    width: 56.9166666666%;
+    height: 319px;
+    margin: 88px 0 0 22%;
 }
-h1{
-    margin-bottom: 30px;
+
+.container-login-email,
+.container-login-password {
+    float: left;
+    clear: both;
+    width: 73.2064421669%;
+    height: 61px;
+    margin-left: 23.89458%;
 }
-#sign-in-button{
-    margin-top: 20px;
+
+.input-login-text-email {
+    display: block;
+    float: left;
+    width: 48.8303706254%;
+    height: 61px;
+    margin-left: 2.2730283201%;
+    padding: 0 10px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background-color: rgb(242, 242, 242);
+    font-size: 1.316em;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+
+.password-login-text-pass {
+    display: block;
+    float: left;
+    width: 48.9999205234%;
+    height: 61px;
+    margin-left: 2.0081066044%;
+    padding: 0 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgb(242, 242, 242);
+    font-size: 1.368em;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+
+.text {
+    float: left;
+    width: 60%;
+    min-height: 64px;
+    margin: 11px 0 0 24.70488653%;
+    font-size: 1.895em;
+    text-align: center;
+    color: rgb(1, 0, 225);
+}
+
+.text-login-email {
+    float: left;
+    width: 20.9631728045%;
+    min-height: 46px;
+    margin: 15px 0 0 -2.8187670544%;
+    font-size: 1em;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.text-login-password-label {
+    float: left;
+    width: 20.9631728045%;
+    min-height: 46px;
+    margin: 15px 0 0 -2.7233952368%;
+    font-size: 1em;
+    text-align: center;
+    color: rgb(0, 0, 0);
 }

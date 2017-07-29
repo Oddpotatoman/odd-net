@@ -21,16 +21,31 @@
     });
 
 //Dynamic sites
+    //DnD Character
+        Route::get('/dnd', 'CharactersController@index.css');
+        Route::get('/dnd/create', 'CharactersController@create');
+        Route::get('/dnd/character/{id}', 'CharacterController@show');
     //Blog
-        Route::get('/blog', 'PostsController@index');
+        Route::get('/blog', 'PostsController@index.css');
         Route::get('/blog/create', 'PostsController@create');
         Route::post('/posts', 'PostsController@store');
         Route::get('/blog/{id}', 'PostsController@show');
         Route::post('blog/posts/{post}/comments', 'CommentsController@store');
 
     // Daylog
-        Route::get('/daylog', 'DaylogsController@index');
+        Route::get('/daylog', 'DaylogsController@index.css');
         Route::post('/daylog', 'DaylogsController@create');
+
+    // The Game KP
+        Route::get('/thegame', 'ThegameController@index');
+        Route::get('/thegame/addarea', 'ThegameController@addarea');
+        Route::get('/thegame/view', 'ThegameController@view');
+        Route::get('/thegame/addpoint', 'ThegameController@points');
+        Route::post('/thegame/givepoints', 'ThegameController@givepoints');
+        Route::post('/thegame/addarea', 'ThegameController@createArea');
+
+
+
 
 // Authentication
     //Global site function

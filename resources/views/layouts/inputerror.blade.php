@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/errors.css') }}">
+<link rel="stylesheet" href="{{ asset('index.css') }}">
 
 @if(count($errors))
     <div class="error-report">

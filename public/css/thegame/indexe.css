@@ -1,0 +1,140 @@
+.container-thegame-text{
+    width:100%;
+    height:110px;
+    background-color: rgba(255, 179, 0, 0.9);
+    margin-top: 50px;
+}
+.container-thegame-text p{
+
+    background-color: transparent;
+    font-family: inherit;
+    font-style: normal;
+    font-size: 5.125em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    word-spacing: -4px;
+    color: #0a0091;
+    margin: 6px 0 0 -0.02472%;
+    text-align: center;
+    vertical-align: middle;
+}
+.container-buttons-thegame{
+    height: 120px;
+    width: 75%;
+    margin-left: 14%;
+}
+.button-thegame{
+    display: block;
+    float: left;
+    width: 18.0727144369%;
+    height: 75px;
+    margin: 94px 0 0 12.67404%;
+    border-radius: 44px;
+    background-color: rgb(13, 33, 150);
+    font-size: 1em;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.button-thegame:hover{
+    cursor: pointer;
+}
+.thegame-form-group{
+    margin-left: 25%;
+    width:50%;
+    text-align: center;
+}
+.thegame-form-text{
+    align-content: center;
+    margin-right: auto;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 1em;
+    border: solid lightgray 1px;
+}
+.thegame-form-button{
+    margin-top: 20px;
+    background-color: #204d74;
+    border: none;
+    border-radius: 135px;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.thegame-form-button:hover{
+    margin-top: 20px;
+    background-color: darkorange;
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.container-thegame-form-addarea{
+    width: 100%;
+    text-align: center;
+}
+.thegame-form-selector{
+    border: 1.5px solid #ccc;
+    width: 190px;
+    height: 30px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+}
+.thegame-form-selector select{
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+}
+.thegame-form-selector select:focus {
+    outline:none;
+}
+.thegame-contain-score{
+    width: 24%;
+    height: 100%;
+    float: left;
+    border: solid black 2px;
+}
+.thegame-score-title{
+    height: 100px;
+    border-bottom: solid black;
+}
+.thegame-score-body{
+    text-align: center;
+    height: 800px;
+    background-color: #d8c68f;
+}
+.thegame-score-good{
+     color: green;
+    font-size: 25px;
+ }
+.thegame-score-bad{
+    color: red;
+    font-size: 24px;
+}
+.thegame-score-neutral{
+    font-size: 24px;
+}
+.thegame-show-total-score{
+    color: black;
+    font-size: 34px;
+    border-bottom: solid black;
+}
+.thegame-total-score-contain{
+    height: 50px;
+}
+.thegame-score-points{
+    height: 100%;
+    margin-top: 10px;
+}
