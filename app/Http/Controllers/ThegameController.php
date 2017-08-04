@@ -24,14 +24,11 @@ class ThegameController extends Controller
         $areapoints = array();
         foreach($areas as $key => $area) {
             $totalPoints = 1000;
-            $points = DB::table('points')->select('points')->groupBy('points')
+            $points = DB::table('points')
+                ->select('points')
                 ->where('area_id', $key+1)
-               ->get();
-            foreach($points as $point) {
-                $decoded = json_decode($point->points);
-                $totalPoints += $decoded;
-            }
-            $areapoints[$area] = $totalPoints;
+               ->sum('points');
+            $areapoints[$area] = $points+1000;
         }
         return $areapoints;
     }

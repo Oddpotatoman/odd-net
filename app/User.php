@@ -36,6 +36,11 @@ class User extends Authenticatable
 
         return $this->hasMany(Daylog::class)->latest();
     }
+    public function characters(){
+
+        return $this->hasMany(Character::class);
+    }
+
     public function addDaylog($body){
         Daylog::create([
             'body' => request('body'),
