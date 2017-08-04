@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
     <title>THE GAME</title>
 </head>
 <body class="thegame-score-body">
