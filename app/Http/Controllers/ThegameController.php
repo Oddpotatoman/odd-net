@@ -18,21 +18,24 @@ class ThegameController extends Controller
     public function addarea() {
         return view('thegame.addarea');
     }
+
     private function getPoints(){
         $areas = $this->getAreas();
         $areapoints = array();
         foreach($areas as $key => $area) {
             $totalPoints = 1000;
-            $points = DB::table('points')->select('points',DB::raw('SUM(points) as totalPoints'))->groupBy('points')
+            $points = DB::table('points')->select('points')->groupBy('points')
                 ->where('area_id', $key+1)
                ->get();
             foreach($points as $point) {
-                $totalPoints += $point->points;
+                $decoded = json_decode($point->points);
+                $totalPoints += $decoded;
             }
             $areapoints[$area] = $totalPoints;
         }
         return $areapoints;
     }
+
     private function getPointsText(){
         $areaPointText = array();
         $areas = $this->getAreas();
@@ -42,7 +45,7 @@ class ThegameController extends Controller
                 ->select('points', 'body')
                 ->where('area_id', $key+1)
                 ->orderBy('id', 'desc')
-                ->take(10)
+                ->take(11)
                 ->get();
             $areaPointText[$area] = $pointsummaries;
         }
