@@ -26,7 +26,7 @@
         Route::get('/dnd/create', 'CharactersController@create');
         Route::get('/dnd/character/{id}', 'CharacterController@show');
     //Blog
-        Route::get('/blog', 'PostsController@index.css');
+        Route::get('/blog', 'PostsController@index');
         Route::get('/blog/create', 'PostsController@create');
         Route::post('/posts', 'PostsController@store');
         Route::get('/blog/{id}', 'PostsController@show');
@@ -43,7 +43,8 @@
         Route::get('/thegame/addpoint', 'ThegameController@points');
         Route::post('/thegame/givepoints', 'ThegameController@givepoints');
         Route::post('/thegame/addarea', 'ThegameController@createArea');
-
+    // Budget manager
+        Route::get('/budget', 'BudgetController@index');
 
 
 
