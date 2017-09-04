@@ -27,7 +27,10 @@
         <ul>
             <li>
                 <h3>Universitetet i Agder - IT og Kommunikasjonssystemer - 2017-2020 (Nåværende)</h3>
-                <p></p>
+                <p>
+                    It og informasjonssystemer dreier seg om sammenkoblingen mellom bedrifter og IT.
+                    Her lærer vi å være noen som forstår seg på hva bedriftene trenger i tillegg til å kunne bidra med det tekniske.
+                </p>
             </li>
             <li>
                 <h3>Vågen Vgs - Medier & Kommunikasjon - 2013-2016 (3år)</h3>
@@ -61,7 +64,7 @@
                 <p>
                     Min første jobb var i Kongeparken. I disse årene lærte jeg mye, spesielt om kundeservice.
                     Jeg har jobbet med mye diverse disse tre årene, spesielt innen Retail.
-                    Jeg utfordret meg stadig og utviklet meg selv statig.
+                    Jeg utfordret meg stadig og utviklet meg selv stadig.
                 </p>
             </li>
         </ul>
