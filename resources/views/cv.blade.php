@@ -12,7 +12,7 @@
         <div class = "cv-personal-info">
             <ul>
                 <p>Odd Andre Vatne</p>
-                <li>Fødselsdato: 28/09/1997 (19 År) </li>
+                <li>Fødselsdato: 28/09/1997 (20 År) </li>
                 <li>Adresse: Brinken 4B, 4630 </li>
                 <li>Epost: oddandre@skoboks.no</li>
                 <li>Mobil: 94804473</li>
@@ -99,7 +99,7 @@
         <p>
             Jeg har alltid vært interresert i teknologi og datamaskiner. Jeg startet med enkle Python applikasjoner,
             fikk videre en jobb innen systemadministrasjon og support. Med dette året har jeg jobbet i service-industrien i 4 år.
-            Jeg er interresert iå lære mer for å kunne hjelpe meg selv og andre.
+            Jeg er interresert i å lære mer for å kunne hjelpe meg selv og andre.
         </p>
     </div>
 </div>
