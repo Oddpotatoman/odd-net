@@ -63,7 +63,7 @@ class DndtablesController extends Controller
                     $nextTableData->save();
                 }
                 if ($previousTable != null) {
-                    $previousTableData = Dndtable::find($previoustTable);
+                    $previousTableData = Dndtable::find($previoustable);
                     $previousTableData->next_table = $table;
                     $previousTableData->save();
                 }
