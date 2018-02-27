@@ -27,8 +27,8 @@
         Route::get('/dnd/character/{id}', 'CharacterController@show');
 
     //DndTables
-        Route::get('/dndtables/add', 'DndTablesController@add');
-        Route::get('/dndtables/view/{id}', 'DndTablesController@view');
+        Route::get('/dndtables/add', 'DndtablesController@add');
+        Route::get('/dndtables/view/{id}', 'DndtablesController@view');
 
         Route::post('/dndtables/add', 'DndTablesController@addImportedTable');
 
