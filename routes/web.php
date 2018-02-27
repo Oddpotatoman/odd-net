@@ -25,7 +25,14 @@
         Route::get('/dnd', 'CharactersController@index.css');
         Route::get('/dnd/create', 'CharactersController@create');
         Route::get('/dnd/character/{id}', 'CharacterController@show');
-    //Blog
+
+    //DndTables
+        Route::get('/dndtables/add', 'DndTablesController@add');
+        Route::get('/dndtables/view/{id}', 'DndTablesController@view');
+
+        Route::post('/dndtables/add', 'DndTablesController@addImportedTable');
+
+//Blog
         Route::get('/blog', 'PostsController@index');
         Route::get('/blog/create', 'PostsController@create');
         Route::post('/posts', 'PostsController@store');
@@ -33,7 +40,7 @@
         Route::post('blog/posts/{post}/comments', 'CommentsController@store');
 
     // Daylog
-        Route::get('/daylog', 'DaylogsController@index.css');
+        Route::get('/daylog', 'DaylogsController@index');
         Route::post('/daylog', 'DaylogsController@create');
 
     // The Game KP
