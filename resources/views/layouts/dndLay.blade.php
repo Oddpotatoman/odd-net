@@ -20,10 +20,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item<?php
-                if(\Request::is('dndtables/add')) {
+                if(\Request::is('dndtables')) {
                     echo " active";
                 } ?>">
-                    <a class="nav-link" href="#">TEST <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"> Tables <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item<?php
                 if(\Request::is('dndtables/add')) {

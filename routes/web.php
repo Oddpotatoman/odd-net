@@ -28,6 +28,7 @@
 
     //DndTables
         Route::get('/dndtables/add', 'DndtablesController@add');
+        Route::get('/dndtables', 'DndtablesController@index');
         Route::get('/dndtables/view/{id}', 'DndtablesController@view');
 
         Route::post('/dndtables/add', 'DndtablesController@addImportedTable');

@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class DndtablesController extends Controller
 {
     public function index(){
-
+        return view('dnd.index',['tables' => Dndtable::all()]);
     }
     public function view($id){
         $table = Dndtable::find($id);
