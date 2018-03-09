@@ -8,7 +8,7 @@
 
 @section('css')
     <script src="js/clean-blog.min.js"></script>
-    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
+    <link rel="stylesheet" href="css/blog.css">
 @endsection
 
 @section('content')
