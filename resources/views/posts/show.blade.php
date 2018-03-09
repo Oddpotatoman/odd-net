@@ -7,8 +7,8 @@
 @endsection
 
 @section('css')
-    <script src="js/clean-blog.min.js"></script>
-    <link rel="stylesheet" href="css/blog.css">
+    <script src="/js/clean-blog.min.js"></script>
+    <link rel="stylesheet" href="/css/blog.css">
 @endsection
 
 @section('content')

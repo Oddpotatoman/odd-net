@@ -1,10 +1,10 @@
 <!doctype html>
-<script src="js/jquery/jquery-3.3.1.js"></script>
-<script src="js/chosen/chosen.jquery.js"></script>
-<script src="js/bootstrap/bootstrap.js"></script>
-<link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-<link rel="stylesheet" href="css/chosen/chosen.css">
-<link rel="stylesheet" href="css/chosen/chosen-bootstrap.css">
+<script src="/js/jquery/jquery-3.3.1.js"></script>
+<script src="/js/chosen/chosen.jquery.js"></script>
+<script src="/js/bootstrap/bootstrap.js"></script>
+<link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+<link rel="stylesheet" href="/css/chosen/chosen.css">
+<link rel="stylesheet" href="/css/chosen/chosen-bootstrap.css">
 @yield('css')
 <html>
     <header>

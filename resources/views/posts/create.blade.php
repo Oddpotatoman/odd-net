@@ -5,9 +5,9 @@
 
 @endsection
 @section('css')
-    <script src="js/simplemde.min.js"></script>
-    <link rel="stylesheet" href="css/simplemde.min.css">
-    <script src="js/posts/create.js"></script>
+    <script src="/js/simplemde.min.js"></script>
+    <link rel="stylesheet" href="/css/simplemde.min.css">
+    <script src="/js/posts/create.js"></script>
 
 @endsection
 
