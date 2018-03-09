@@ -18,6 +18,13 @@
 //CV
     Route::get('/cv', function () {
         return view('cv');
+    });//CV
+    Route::get('/dndinitiative', function () {
+        return view('dnd.initiative');
+    });
+    //Training
+    Route::get('/training', function () {
+       return view('training.index');
     });
 
 //Dynamic sites
@@ -53,7 +60,8 @@
         Route::post('/thegame/addarea', 'ThegameController@createArea');
     // Budget manager
         Route::get('/budget', 'BudgetController@index');
-
+    // Quotes
+        Route::get('/quotes', 'QuotesController@index');
 
 
 // Authentication

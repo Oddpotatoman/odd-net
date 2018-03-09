@@ -27,13 +27,15 @@ class PostsController extends Controller
     }
     public function show($id){
         $post = Post::find($id);
-        return view('posts.show',compact('post'));
+        $markParser = new \Parsedown();
+        $postBody = $markParser->text($post->body);
+        return view('posts.show',['post' => $post, 'postBody' => $postBody]);
     }
     public function store(){
     //This function will store a post and send it to the database
         //We are validating the DATA before sending it
         $this->validate(request(),[
-            'title' => 'required|max:20',
+            'title' => 'required|max:30',
             'content'=> 'required'
     ]);
         //Create the validated data and send it to the DB
