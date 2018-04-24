@@ -39,8 +39,11 @@
         Route::get('/dndtables/view/{id}', 'DndtablesController@view');
 
         Route::post('/dndtables/add', 'DndtablesController@addImportedTable');
+    //Odd-note
+        Route::get('/oddnote', 'OddnoteController@index');
 
-//Blog
+        Route::post('/oddnote/add','OddnoteController@addNote');
+    //Blog
         Route::get('/blog', 'PostsController@index');
         Route::get('/blog/create', 'PostsController@create');
         Route::post('/posts', 'PostsController@store');

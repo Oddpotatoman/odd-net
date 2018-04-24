@@ -35,7 +35,7 @@ class PostsController extends Controller
     //This function will store a post and send it to the database
         //We are validating the DATA before sending it
         $this->validate(request(),[
-            'title' => 'required|max:30',
+            'title' => 'required|max:70',
             'content'=> 'required'
     ]);
         //Create the validated data and send it to the DB
