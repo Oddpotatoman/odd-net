@@ -1,7 +1,7 @@
 @extends('layouts.manyApps')
 
 @section('css')
-    <script src="{{ asset('js/oddnote/oddnote_link.js') }}"></script>
+    <script src="{{ secure_asset('js/oddnote/oddnote_link.js') }}"></script>
 @endsection
 @section('title')
     OddNote

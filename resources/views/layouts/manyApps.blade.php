@@ -1,10 +1,10 @@
 <!doctype html>
-<script src="{{ asset('js/jquery/jquery-3.3.1.js') }}"></script>
-<script src="{{ asset('js/chosen/chosen.jquery.js') }}"></script>
-<script src="{{ asset('js/bootstrap/bootstrap.js') }}"></script>
-<link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.css') }}">
-<link rel="stylesheet" href="{{ asset('css/chosen/chosen.css') }}">
-<link rel="stylesheet" href="{{ asset('css/chosen/chosen-bootstrap.css') }}">
+<script src="{{ secure_asset('js/jquery/jquery-3.3.1.js') }}"></script>
+<script src="{{ secure_asset('js/chosen/chosen.jquery.js') }}"></script>
+<script src="{{ secure_asset('js/bootstrap/bootstrap.js') }}"></script>
+<link rel="stylesheet" href="{{ secure_asset('css/bootstrap/bootstrap.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('css/chosen/chosen.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('css/chosen/chosen-bootstrap.css') }}">
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 
