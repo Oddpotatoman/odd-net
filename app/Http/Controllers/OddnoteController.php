@@ -15,7 +15,7 @@ class OddnoteController extends Controller
 
     }
     public function generateLink(){
-        $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZØÆÅ';
+        $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $length = 10;
         $link = substr(str_shuffle(str_repeat($pool, $length)), 0, $length);
         $check = DB::table('oddnotes')->where('link',$link)->get();
@@ -37,5 +37,19 @@ class OddnoteController extends Controller
             'text'=>encrypt(request('text')),
             'link'=> $link
         ]);
+        return $link;
+    }
+    public function link($link){
+        return view('/oddnotes/getlink',compact('link'));
+    }
+    public function getLinkData(){
+        $link = \request('link');
+        $link_data = DB::table('oddnotes')->where('link', $link)->get();
+        if($link_data[0]->text != 'used') {
+            DB::table('oddnotes')->where('link', $link)->update(['text' => 'used']);
+            return decrypt($link_data[0]->text);
+        }else {
+            return 'used';
+        }
     }
 }

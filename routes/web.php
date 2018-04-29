@@ -41,8 +41,10 @@
         Route::post('/dndtables/add', 'DndtablesController@addImportedTable');
     //Odd-note
         Route::get('/oddnote', 'OddnoteController@index');
+        Route::get('/oddnote/{link}','OddnoteController@link');
 
         Route::post('/oddnote/add','OddnoteController@addNote');
+        Route::post('/oddnote/getlinkdata','OddnoteController@getLinkData');
     //Blog
         Route::get('/blog', 'PostsController@index');
         Route::get('/blog/create', 'PostsController@create');
