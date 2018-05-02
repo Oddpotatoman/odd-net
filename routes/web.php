@@ -26,6 +26,9 @@
     Route::get('/training', function () {
        return view('training.index');
     });
+    Route::get('/cd', function () {
+       return view('countdown');
+    });
 
 //Dynamic sites
     //DnD Character
@@ -45,6 +48,7 @@
 
         Route::post('/oddnote/add','OddnoteController@addNote');
         Route::post('/oddnote/getlinkdata','OddnoteController@getLinkData');
+        Route::post('/oddnote/check_id','OddnoteController@check_id');
     //Blog
         Route::get('/blog', 'PostsController@index');
         Route::get('/blog/create', 'PostsController@create');
