@@ -14,40 +14,42 @@ class OddnoteController extends Controller
     public function viewNote(){
 
     }
-    public function generateLink(){
-        $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $length = 10;
-        $link = substr(str_shuffle(str_repeat($pool, $length)), 0, $length);
-        $check = DB::table('oddnotes')->where('link',$link)->get();
+    public function check_id(){
+        $check = DB::table('oddnotes')->where('id',request('id'))->get();
         if(!isset($check['items'])){
-            return $link;
+            return "not used";
         } else {
-            return null;
+            return "used";
         }
     }
     public function addNote(){
         $this->validate(request(),[
             'text'=> 'required'
         ]);
-        $link = null;
-        while ($link == null) {
-            $link = $this->generateLink();
-        }
+        $data = json_decode(\request('text'));
         Oddnote::create([
-            'text'=>encrypt(request('text')),
-            'link'=> $link
+            'id'=> \request('id'),
+            'text'=>$data->ct,
+            'salt'=>$data->salt,
+            'iv'=>$data->iv
         ]);
-        return $link;
+        return 'success';
     }
     public function link($link){
         return view('/oddnotes/getlink',compact('link'));
     }
     public function getLinkData(){
         $link = \request('link');
-        $link_data = DB::table('oddnotes')->where('link', $link)->get();
+        $encrypted = json_decode('{"v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes"}');
+
+        $link_data = DB::table('oddnotes')->where('id', $link)->get();
         if($link_data[0]->text != 'used') {
+            $encrypted['iv'] = $link_data[0]->iv;
+            $encrypted['salt'] = $link_data[0]->salt;
+            $encrypted['ct'] = $link_data[0]->ct;
+            $encryptedJson = json_encode($encrypted);
             DB::table('oddnotes')->where('link', $link)->update(['text' => 'used']);
-            return decrypt($link_data[0]->text);
+            return $encryptedJson;
         }else {
             return 'used';
         }

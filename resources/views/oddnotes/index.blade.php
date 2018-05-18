@@ -1,5 +1,6 @@
 @extends('layouts.manyApps')
 @section('css')
+    <script src="{{ secure_asset('js/crypto/crypto.min.js') }}"></script>
     <script src="{{ secure_asset('js/oddnote/oddnote.js') }}"></script>
 @endsection
 @section('title')
