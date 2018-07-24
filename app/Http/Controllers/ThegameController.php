@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Areas;
 use App\Points;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
 
@@ -31,7 +32,7 @@ class ThegameController extends Controller
             $totalPoints = 1000;
             $points = DB::table('points')
                 ->select('points')
-                ->where('area_id', $key+1)
+                ->where('area_id', $area->id)
                ->sum('points');
             $areapoints[$area->name] = $points+1000;
         }
@@ -47,8 +48,9 @@ class ThegameController extends Controller
                 ->select('points', 'body')
                 ->where('area_id', $area->id)
                 ->orderBy('id', 'desc')
-                ->take(8)
+                ->take(7)
                 ->get();
+            $pointsummaries->prepend(['points' => 0,'body' => 'lol']);
             $areaPointText[$area->name] = $pointsummaries;
         }
         return $areaPointText;
@@ -97,7 +99,7 @@ class ThegameController extends Controller
         ]);
          $pointData['bywho'] = Cookie::get('theGameAccess1');
          $pointData['body'] = request('body');
-         $pointData['area_id'] = request('area_id');
+         $pointData['area_id'] = request('areaid');
          $pointData['points'] = request('points');
         $points->givepoints($pointData);
         return redirect('/thegame');

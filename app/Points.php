@@ -11,10 +11,10 @@ class Points extends Model
     }
     public function givePoints($points){
         Points::create([
-            'area_id' => $points->areaid,
-            'points' => $points->points,
-            'body' => $points->body,
-            'bywho' => $points->bywho,
+            'area_id' => $points['area_id'],
+            'points' => $points['points'],
+            'body' => $points['body'],
+            'bywho' => $points['bywho'],
         ]);
     }
 }
