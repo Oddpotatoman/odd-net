@@ -55,6 +55,8 @@
         Route::post('/posts', 'PostsController@store');
         Route::get('/blog/{id}', 'PostsController@show');
         Route::post('blog/posts/{post}/comments', 'CommentsController@store');
+    //TasksManager
+        Route::get('/tasks', 'TaskController@index');
 
     // Daylog
         Route::get('/daylog', 'DaylogsController@index');
@@ -67,10 +69,10 @@
         Route::get('/thegame/addpoint', 'ThegameController@points');
         Route::post('/thegame/givepoints', 'ThegameController@givepoints');
         Route::post('/thegame/addarea', 'ThegameController@createArea');
+        Route::get('/thegame/getaccess', 'ThegameController@getAccess');
+        Route::post('/thegame/addcookie', 'ThegameController@addCookieForAccess');
     // Budget manager
         Route::get('/budget', 'BudgetController@index');
-    // Quotes
-        Route::get('/quotes', 'QuotesController@index');
 
 
 // Authentication

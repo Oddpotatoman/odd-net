@@ -9,28 +9,20 @@
     <title>THE GAME</title>
 </head>
 <body class="thegame-score-body">
+<?php $count = 1; ?>
 @foreach ($all as $area => $points)
-
-    <div class="thegame-contain-score">
-        <div class="thegame-score-title">
-            <h1>{{$area}}</h1>
-        </div>
-        <div class="thegame-total-score-contain">
-            <h1 class="thegame-show-total-score">{{$points['total']}}</h1>
-        </div>
-        <div class="thegame-score-points">
-            @foreach($points as $key => $point)
-                <div class="thegame-point">
-                    @if($key != 'total')
-                        <h3 class="thegame-score-neutral"><span @if($point->points > 0)class="thegame-score-good" @endif
-                        @if($point->points < 0) class="thegame-score-bad" @endif
-                            >{{$point->points}}</span>{{' '.$point->body}}</h3>
-                        @endif
-                </div>
-                @endforeach
-        </div>
+    <div class="tableContent">
+        <p class="tableHeaderTG">{{$area}}</p>
+        <p class="scoreTG">{{$points['total']}}</p>
+        @foreach($points as $key => $point)
+            <?php if($key != 'total') { ?>
+            <div class="pointTGcontainer <?php if($point->points >= 0) {echo "good";}else{echo "bad";}?> "><div class="divPoints"><a class="pointTGcontainerPoint">{{$point->points}} points</a></div><div class="divBody"><a class="pointTGcontainerBody"> {{$point->body}}</a></div>
+            </div>
+            <?php } ?>
+        @endforeach
     </div>
+@endforeach
+</table>
 
-    @endforeach
 </body>
 </html>

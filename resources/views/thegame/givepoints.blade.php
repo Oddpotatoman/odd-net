@@ -1,6 +1,8 @@
 <!doctype html>
 <link rel="stylesheet" href="{{ asset('css/thegame/indexe.css') }}">
 <link rel="stylesheet" href="{{ asset('css/errors.css') }}">
+<link rel="stylesheet" href="{{asset('css/bootstrap/bootstrap.css')}}">
+
 
 
 <html>
@@ -20,8 +22,8 @@
         <div class="thegame-form-group">
             <h2>Til omeråde</h2>
             <select type="text" class="thegame-form-selector" id="areaid" name="areaid" placeholder="Velg omeråde">
-                @foreach($areas as $key => $area)
-                <option value={{$key+1}}>{{$area}}</option>
+                @foreach($areas as $area)
+                <option value={{$area->id}}>{{$area->name}}</option>
                     @endforeach
             </select>
         </div>
@@ -34,11 +36,6 @@
         <div class="thegame-form-group">
             <h2>Tekst som vises</h2>
             <input type="text" class="thegame-form-text" name="body" id="body"></input>
-        </div>
-
-        <div class="thegame-form-group">
-            <h2>Gitt av</h2>
-            <input type="text" class="thegame-form-text" name="bywho" id="bywho"></input>
         </div>
 
         <button type="submit" class="thegame-form-button">Submit</button>
