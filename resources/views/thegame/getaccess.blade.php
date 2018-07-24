@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GetAccess</title>
-    <link rel="stylesheet" href="{{asset('css/bootstrap/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('css/fonts/ionicons.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/thagame/Login-Form-Dark.css')}}">
-    <link rel="stylesheet" href="{{asset('css/thegame/styles.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/bootstrap/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/fonts/ionicons.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/thagame/Login-Form-Dark.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/thegame/styles.css')}}">
 </head>
 
 <body>

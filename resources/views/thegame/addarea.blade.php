@@ -1,6 +1,6 @@
 <!doctype html>
-<link rel="stylesheet" href="{{ asset('css/thegame/indexe.css') }}">
-<link rel="stylesheet" href="{{ asset('css/errors.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('css/thegame/indexe.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('css/errors.css') }}">
 
 
 <html>
