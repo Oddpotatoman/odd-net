@@ -12,33 +12,40 @@
     <title>THE GAME</title>
 </head>
 <body class="thegame-body">
-<div class="container-thegame-text">
-    <p class="text-thegame-title"><span>THE GAME POINTS 2k{{date('y')}}</span></p>
-</div>
-<div class="container-thegame-form-addarea">
-    <form name="addarea-thegame" method="POST" action="/thegame/givepoints">
-        {{csrf_field()}}
 
-        <div class="thegame-form-group">
-            <h2>Til omeråde</h2>
-            <select type="text" class="thegame-form-selector" id="areaid" name="areaid" placeholder="Velg omeråde">
+<div class="container justify-content-between" style="margin-top: 100px">
+
+<div class="col-8" style="text-align: center">
+
+    <div class="container-thegame-text">
+        <p class="text-thegame-title"><span>THE GAME POINTS 2k{{date('y')}}</span></p>
+    </div>
+
+    <form name="addarea-thegame" method="POST" action="/thegame/givepoints">
+
+        <div class="form-group">
+            <label for="inputGroupSelect02">Options</label>
+
+            <select class="custom-select" id="inputGroupSelect02" id="areaid" name="areaid" placeholder="Velg omeråde">
                 @foreach($areas as $area)
-                <option value={{$area->id}}>{{$area->name}}</option>
-                    @endforeach
+                    <option value={{$area->id}}>{{$area->name}}</option>
+                @endforeach
             </select>
         </div>
 
-        <div class="thegame-form-group">
-            <h2>Poeng</h2>
-            <input type="text" class="thegame-form-text" name="points" id="points"></input>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Poeng</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Poeng" name="points" id="points" aria-label="Poeng" aria-describedby="basic-addon1">
         </div>
 
-        <div class="thegame-form-group">
-            <h2>Tekst som vises</h2>
-            <input type="text" class="thegame-form-text" name="body" id="body"></input>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Tekst som vises</label>
+            <input type="text" class="form-control" name="body" id="body" placeholder="Tekst som vises">
         </div>
 
-        <button type="submit" class="thegame-form-button">Submit</button>
+        <button class="btn btn-primary" type="submit">Button</button>
     </form>
     @if(count($errors))
         <div class="error-report">
@@ -51,6 +58,7 @@
             </ul>
         </div>
     @endif
+</div>
 </div>
 </body>
 </html>

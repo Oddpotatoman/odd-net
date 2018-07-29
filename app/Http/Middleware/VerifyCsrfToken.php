@@ -12,6 +12,7 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        //
+        '/thegame/getaccess','/thegame/addcookie','/thegame/addarea','/thegame/getaccess',
+        '/thegame/addpoint','/thegame/givepoints'
     ];
 }
