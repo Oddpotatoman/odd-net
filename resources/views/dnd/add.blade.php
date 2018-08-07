@@ -2,7 +2,7 @@
 
 @section('css')
 
-    <script src="{{ asset('js/dndJs.js') }}"></script>
+    <script src="{{ secure_asset('js/dndJs.js') }}"></script>
 
 @endsection
 
