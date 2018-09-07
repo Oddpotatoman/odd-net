@@ -40,6 +40,7 @@
         Route::get('/dndtables/add', 'DndtablesController@add');
         Route::get('/dndtables', 'DndtablesController@index');
         Route::get('/dndtables/view/{id}', 'DndtablesController@view');
+        route::get('/npcs/create', 'DndtablesController@createNpc');
 
         Route::post('/dndtables/add', 'DndtablesController@addImportedTable');
     //Odd-note

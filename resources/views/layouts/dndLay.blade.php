@@ -32,10 +32,10 @@
                 if(\Request::is('dndtables/add')) {
                     echo " active";
                 } ?>">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Npc's</a>
                 </li>
                 <li class="nav-item<?php
-                if(\Request::is('dndtables/add')) {
+                if(\Request::is('/npcs')) {
                     echo " active";
                 } ?>">
                     <a class="nav-link" href="#">Pricing</a>

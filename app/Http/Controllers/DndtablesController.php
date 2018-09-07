@@ -33,6 +33,12 @@ class DndtablesController extends Controller
         $tables = Dndtable::all();
         return view('dnd.add', compact('tables'));
     }
+    public function viewNpc($id){
+
+    }
+    public function createNpc(){
+        return view('dnd.npcMakerCreate');
+    }
     public function addImportedTable(Request $request){
 
         if(Dndtable::where('tableName', $request->input('tableName'))->first() == null){

@@ -11,7 +11,7 @@ class DaylogsController extends Controller
 {
     public function index(){
         if (Auth::check()) {
-            $user = \App\User::find(Auth::user()->id);
+            $user = User::find(Auth::user()->id);
             $logs = $user->daylogs;
             return view('Daylogs.index', compact('logs'));
         } else {
