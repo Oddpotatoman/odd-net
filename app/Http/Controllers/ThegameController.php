@@ -29,12 +29,12 @@ class ThegameController extends Controller
         $areas = $this->getAreas();
         $areapoints = array();
         foreach($areas as $key => $area) {
-            $totalPoints = 1000;
+            $totalPoints = 0;
             $points = DB::table('points')
                 ->select('points')
                 ->where('area_id', $area->id)
                ->sum('points');
-            $areapoints[$area->name] = $points+1000;
+            $areapoints[$area->name] = $points;
         }
         return $areapoints;
     }
