@@ -31,8 +31,13 @@
     });
 
 //Dynamic sites
+    // DownloadSecret
+        Route::get('/secretdownload/{fileNameInHash}', 'DownloadSecretController@downloadFile');
+        Route::post('/secretdownload/auth/{fileNameInHash}', 'DownloadSecretController@authDown');
+    // Debts
+        Route::get('/debt', 'DebtController@index');
     //DnD Character
-        Route::get('/dnd', 'CharactersController@index.css');
+        Route::get('/dnd', 'CharactersController@index');
         Route::get('/dnd/create', 'CharactersController@create');
         Route::get('/dnd/character/{id}', 'CharacterController@show');
 
